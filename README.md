@@ -2,9 +2,11 @@
 Для запуска веб-приложения нужно:
 1) Скачать и установить любой локальный сервер(PHP local server), я же использовал Open Server - https://ospanel.io/download/
 2) После установки локального севера нужно зайти в корневую папку сервера, найти там папку "domains" и внутри нее создать папку для вашего проекта, я же создал папку "webbylab.dev".
-3) Склонировать проект в папку "webbylab.dev" использовав команду: 
+3) Склонировать проект на рабочий стол использовав команду: 
 
 git clone https://github.com/maksru/Webbylab_film_test.git
+
+И все файлы с папки "Webbylab_film_test" скопировать в папку "webbylab.dev".
 
 4) Изменить учетные данные подключения к базе данных MySQL (/config/database.php).
 5) Перед запуском локального сервера в Настройках->Домены установить путь к корневой папке "public".
@@ -22,9 +24,11 @@ git clone https://github.com/maksru/Webbylab_film_test.git
 To start the web application you need:
 1) Download and install any local server (PHP local server), I used Open Serve - https://ospanel.io/download/
 2) After installing the local north, you need to go to the root folder of the server, find the "domains" folder there and create a folder for your project inside it, I created the "webbylab.dev" folder.
-3) Clone the project into the "webbylab.dev" folder using the command:
+3) Clone the project on the desktop using the command:
 
 git clone https://github.com/maksru/Webbylab_film_test.git
+
+And copy all the files from the "Webbylab_film_test" folder to the "webbylab.dev" folder.
 
 4) Change the credentials for connecting to the MySQL database (/config/database.php).
 5) Before starting the local server in the Settings->ёDomains, set the path to the root folder "public".
