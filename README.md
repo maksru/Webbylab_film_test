@@ -10,3 +10,4 @@ git clone https://github.com/maksru/Webbylab_film_test.git.
 Перед запуском локального севера в настройках установить путь к корневой папке "public".
 
 ![1](https://user-images.githubusercontent.com/32376236/68546437-befb8880-03de-11ea-8153-c772f793f229.jpg)
+![2](https://user-images.githubusercontent.com/32376236/68546732-48f92080-03e2-11ea-97a9-3f6c6eb62a45.jpg)
