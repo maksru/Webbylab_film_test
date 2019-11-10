@@ -64,7 +64,7 @@ class MovieController {
     }
 
     /**
-     * Возвращает страницу с редактированием
+     * Возвращает страницу с редактированием.
      */
     public function editAction(int $id)  {
         $movie = Movie::findOne($id);
@@ -73,7 +73,7 @@ class MovieController {
     }
 
     /**
-     * Обновление поля
+     * Обновление поля.
      */
     public function updateAction(int $id) {
         $_SESSION["edit"] = "true";
@@ -89,37 +89,15 @@ class MovieController {
     }
 
     /**
-     * Сортировка
+     * Сортировка фильмов по названию фильмов в алфавитном порядке.
      */
     public function sortAction() {
         $movies = Movie::allFind();
-        setlocale(LC_ALL, 'ukr_uk');
-        uasort($movies, 'self::sort');
-        return View::view('index', $movies);
-    }
+        usort($movies, function($a, $b) {
+            return $a['title'] <=> $b['title'];
+        });
 
-    private function sort($a, $b) {
-        $a = mb_strtoupper($a['title'], 'UTF-8');
-        $b = mb_strtoupper($b['title'], 'UTF-8');
-        $alphabet = array(
-            'А' => 1, 'Б' => 2, 'В' => 3, 'Г' => 4, 'Д' => 5, 'Е' => 6, 'Є' => 7, 'Ж' => 8, 'З' => 9, 'И' => 10, 'І' => 11,
-            'Ї' => 12, 'Й' => 13, 'К' => 14, 'Л' => 15, 'М' => 16, 'Н' => 17, 'О' => 18, 'П' => 19, 'Р' => 20, 'С' => 21, 'Т' => 22,
-            'У' => 23, 'Ф' => 24, 'Х' => 25, 'Ц' => 26, 'Ч' => 27, 'Ш' => 28, 'Щ' => 29, 'Ь' => 30, 'Ю' => 31, 'Я' => 32
-        );
-        $lengthA = mb_strlen($a, 'UTF-8');
-        $lengthB = mb_strlen($b, 'UTF-8');
-        for ($i = 0; $i < ($lengthA > $lengthB ? $lengthB : $lengthA); $i++) {
-            if (isset($alphabet[mb_substr($a, $i, 1, 'UTF-8')]) && isset($alphabet[mb_substr($b, $i, 1, 'UTF-8')])) {
-                if ($alphabet[mb_substr($a, $i, 1, 'UTF-8')] < $alphabet[mb_substr($b, $i, 1, 'UTF-8')]) {
-                    return -1;
-                    break;
-                } elseif ($alphabet[mb_substr($a, $i, 1, 'UTF-8')] > $alphabet[mb_substr($b, $i, 1, 'UTF-8')]) {
-                    return 1;
-                }
-            } else {
-                return strnatcasecmp($a, $b);
-            }
-        }
+        return View::view('index', $movies);
     }
 
     /**
