@@ -9,4 +9,4 @@
 4) Изменить учетные данные подключения к базе данных MySQL (/config/database.php).
 5) Перед запуском локального севера в настройках установить путь к корневой папке "public".
 
-![Image alt](https://github.com/{username}/{repository}/raw/{branch}/http://joxi.ru/12M6Rboclpd0nA)
+![1](https://user-images.githubusercontent.com/32376236/68546251-14369a80-03dd-11ea-8979-afe531499577.jpg)
