@@ -4,10 +4,10 @@
 2) После установки локального севера нужно зайти в корневую папку сервера, найти там папку "domains" и внутри нее создать папку для вашего проекта, я же создал папку "webbylab.dev".
 3) Склонировать проект в папку "webbylab.dev" использовав команду: 
 
-git clone https://github.com/maksru/Webbylab_film_test.git.
+git clone https://github.com/maksru/Webbylab_film_test.git
 
 4) Изменить учетные данные подключения к базе данных MySQL (/config/database.php).
-5) Перед запуском локального сервера в настройках установить путь к корневой папке "public".
+5) Перед запуском локального сервера в Настройках->Домены установить путь к корневой папке "public".
 
 ![1](https://user-images.githubusercontent.com/32376236/68546437-befb8880-03de-11ea-8153-c772f793f229.jpg)
 
@@ -24,10 +24,10 @@ To start the web application you need:
 2) After installing the local north, you need to go to the root folder of the server, find the "domains" folder there and create a folder for your project inside it, I created the "webbylab.dev" folder.
 3) Clone the project into the "webbylab.dev" folder using the command:
 
-git clone https://github.com/maksru/Webbylab_film_test.git.
+git clone https://github.com/maksru/Webbylab_film_test.git
 
 4) Change the credentials for connecting to the MySQL database (/config/database.php).
-5) Before starting the local server in the settings, set the path to the root folder "public".
+5) Before starting the local server in the Settings->ёDomains, set the path to the root folder "public".
 
 ![1](https://user-images.githubusercontent.com/32376236/68546437-befb8880-03de-11ea-8153-c772f793f229.jpg)
 
